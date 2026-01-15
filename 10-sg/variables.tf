@@ -5,3 +5,14 @@ variable "project_name" {
 variable "environment"{
     default ="dev"
 }
+
+variable "sg_name"{
+  default =[
+  #databses
+  "mongodb","redis","mysql", "rabbitmq",
+  #backend
+  "catalogue", "user","cart","shipping","payment",
+  #frontend
+  "frontend"
+  ]
+}
